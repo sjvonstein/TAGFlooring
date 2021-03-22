@@ -5,7 +5,6 @@ ruby '3.0.0'
 
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'rails', '~> 6.1.2', '>= 6.1.2.1'
-gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 gem 'simple_form', '~> 5.1'
@@ -25,6 +24,11 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   gem 'spring'
+  gem 'sqlite3', '~> 1.4'
+end
+
+group :production do
+  gem 'pg', '~> 1.2', '>= 1.2.3'
 end
 
 group :test do
