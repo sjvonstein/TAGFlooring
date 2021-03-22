@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unit_id: 1
+  room_name_id: 1
+  product_id: 1
+  installer_id: 1
+  install_date: 2021-02-20
+
+two:
+  unit_id: 1
+  room_name_id: 1
+  product_id: 1
+  installer_id: 1
+  install_date: 2021-02-20

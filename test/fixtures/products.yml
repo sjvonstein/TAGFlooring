@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_type_id: 1
+  manufacturer_id: 1
+  collection: MyString
+  color: MyString
+  uom_id: 1
+  discontinued: false
+
+two:
+  product_type_id: 1
+  manufacturer_id: 1
+  collection: MyString
+  color: MyString
+  uom_id: 1
+  discontinued: false

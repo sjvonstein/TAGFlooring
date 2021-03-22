@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @installation.unit_id %>
+</p>
+
+<p>
+  <strong>Room name:</strong>
+  <%= @installation.room_name_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @installation.product_id %>
+</p>
+
+<p>
+  <strong>Installer:</strong>
+  <%= @installation.installer_id %>
+</p>
+
+<p>
+  <strong>Install date:</strong>
+  <%= @installation.install_date %>
+</p>
+
+<%= link_to 'Edit', edit_installation_path(@installation) %> |
+<%= link_to 'Back', installations_path %>

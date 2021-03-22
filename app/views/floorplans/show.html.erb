@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @floorplan.name %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @floorplan.code %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @floorplan.community_id %>
+</p>
+
+<%= link_to 'Edit', edit_floorplan_path(@floorplan) %> |
+<%= link_to 'Back', floorplans_path %>
