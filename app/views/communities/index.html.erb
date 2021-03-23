@@ -16,14 +16,13 @@
       <tr>
         <td><%= community.name %></td>
         <td><%= community.code %></td>
-        <td><%= link_to 'Show', community %></td>
-        <td><%= link_to 'Edit', edit_community_path(community) %></td>
-        <td><%= link_to 'Destroy', community, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', community, class:"btn btn-sm btn-secondary" %></td>
+        <td><%= link_to 'Edit', edit_community_path(community), class:"btn btn-sm btn-outline-secondary" %></td>
+        <td><%= link_to 'Destroy', community, class:"btn btn-sm btn-outline-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
 
-<%= link_to 'New Community', new_community_path %>
+<%= link_to 'New Community', new_community_path, class:"btn btn-secondary" %>
