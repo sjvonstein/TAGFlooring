@@ -12,8 +12,23 @@
 
 <p>
   <strong>Community:</strong>
-  <%= @floorplan.community_id %>
+  <%= @floorplan.community.name %>
 </p>
+
+<p>
+  <strong>Floors:</strong>
+  <%= @floorplan.floors %>
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  <ul>
+    <% @floorplan.floorplanlayouts.each do |t| %>
+      <li>
+        <%= t.room_name.name %>
+      </li>
+    <% end %>
+  </ul>
 
 <%= link_to 'Edit', edit_floorplan_path(@floorplan) %> |
 <%= link_to 'Back', floorplans_path %>

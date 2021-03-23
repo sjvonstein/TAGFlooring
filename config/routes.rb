@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :floorplanlayouts
   resources :categories
   resources :layouts
   resources :installations

@@ -8,6 +8,7 @@ class FloorplansController < ApplicationController
 
   # GET /floorplans/1 or /floorplans/1.json
   def show
+    @floorplan = Floorplan.find(params[:id])
   end
 
   # GET /floorplans/new

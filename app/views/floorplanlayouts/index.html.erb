@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Floorplanlayouts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Floorplan</th>
+      <th>Floorplan Code</th>
+      <th>Room name</th>
+      <th>Community</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @floorplanlayouts.each do |floorplanlayout| %>
+      <tr>
+        <td><%= floorplanlayout.floorplan.name %></td>
+        <td><%= floorplanlayout.floorplan.code %></td>
+        <td><%= floorplanlayout.room_name.name %></td>
+        <td><%= floorplanlayout.floorplan.community.name %></td>
+        <td><%= link_to 'Show', floorplanlayout %></td>
+        <td><%= link_to 'Edit', edit_floorplanlayout_path(floorplanlayout) %></td>
+        <td><%= link_to 'Destroy', floorplanlayout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Floorplanlayout', new_floorplanlayout_path %>
