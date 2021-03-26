@@ -4,11 +4,12 @@
 // that code so it'll be compiled.
 
 //following install instructions for bootstrap gem, the next 3 lines should be commented out; however, dropdown in navbar
-//stops working properly if I do
+//stops working properly if I do. Turns out it won't compiled on heroku because sprokets uses
+//the comment slashes with an equals sign
 
-= require jquery3
-= require popper
-= require bootstrap-sprockets
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
