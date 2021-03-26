@@ -3,7 +3,13 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import 'bootstrap'
+//following install instructions for bootstrap gem, the next 3 lines should be commented out; however, dropdown in navbar
+//stops working properly if I do
+
+= require jquery3
+= require popper
+= require bootstrap-sprockets
+
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
