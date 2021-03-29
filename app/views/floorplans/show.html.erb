@@ -1,34 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @floorplan.name %>
-</p>
+<h1><%= @floorplan.name %></h1>
 
 <p>
-  <strong>Code:</strong>
-  <%= @floorplan.code %>
+  <strong>Code: </strong><%= @floorplan.code %> | <strong>Community: </strong><%= @floorplan.community.name %> | <strong># of Floors: </strong><%= @floorplan.floors %> | <%= link_to 'Edit', edit_floorplan_path(@floorplan), class:'btn btn-secondary btn-sm' %> | <%= link_to 'Delete', @floorplan, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
 </p>
-
-<p>
-  <strong>Community:</strong>
-  <%= @floorplan.community.name %>
-</p>
-
-<p>
-  <strong>Floors:</strong>
-  <%= @floorplan.floors %>
-</p>
-
-<p>
-  <strong>Rooms:</strong>
-  <ul>
+<h2>Rooms:</h2>
+  <ul class='list-group list-group-horizontal-md'>
     <% @floorplan.floorplanlayouts.each do |t| %>
-      <li>
+      <li class='list-group-item flex-fill'>
         <%= t.room_name.name %>
       </li>
     <% end %>
   </ul>
 
-<%= link_to 'Edit', edit_floorplan_path(@floorplan) %> |
+
 <%= link_to 'Back', floorplans_path %>
+
+

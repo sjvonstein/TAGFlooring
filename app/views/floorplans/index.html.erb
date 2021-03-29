@@ -16,13 +16,10 @@
   <tbody>
     <% @floorplans.each do |floorplan| %>
       <tr>
-        <td><%= floorplan.code %></td>
+        <td><%= link_to floorplan.code, floorplan %></td>
         <td><%= floorplan.name %></td>
         <td><%= floorplan.floors %></td>
         <td><%= floorplan.community.name %></td>
-        <td><%= link_to 'Show', floorplan %></td>
-        <td><%= link_to 'Edit', edit_floorplan_path(floorplan) %></td>
-        <td><%= link_to 'Destroy', floorplan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
