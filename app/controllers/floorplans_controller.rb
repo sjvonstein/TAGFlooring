@@ -37,6 +37,9 @@ class FloorplansController < ApplicationController
 
   # PATCH/PUT /floorplans/1 or /floorplans/1.json
   def update
+
+
+
     respond_to do |format|
       if @floorplan.update(floorplan_params)
         format.html { redirect_to @floorplan, notice: "Floorplan was successfully updated." }
@@ -65,6 +68,6 @@ class FloorplansController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def floorplan_params
-      params.require(:floorplan).permit(:name, :code, :community_id)
+      params.require(:floorplan).permit(:name, :code, :community_id, :floors, { floorplan_images: [] } )
     end
 end
